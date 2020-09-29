@@ -12,6 +12,6 @@ class SimplePrototypeTest {
         SimplePrototype clone = null;
         clone = simplePrototype.clone();
         boolean b = simplePrototype == clone;
-        System.out.println(b);
+        System.out.println(b); //false
     }
 }
