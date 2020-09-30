@@ -1,5 +1,10 @@
 # design_mode
 > 23 design modes
+>
+the basic elements needed for understanding one design mode :
+1. what is the problem it solves ?
+2. how to solve ?
+3. how is the solving effect ?
 ## singleton
   - lazy mode
     - statc inner class
