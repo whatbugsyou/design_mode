@@ -28,6 +28,16 @@ the basic elements needed for understanding one design mode :
 > reuse objects to reduce the operation times of `new`, 
 > if we need objects of the same class and only properties are 
 > different ,even the same.  
->
+> 
 > the flyweight model always keeps a `Map` of objects ,
->`new` object for the first time and saves it in the `Map`, returns the reference after.  
+>`new` object for the first time and saves it in the `Map`, 
+> returns the reference after.  
+
+## memento
+> save one object's status and recover after.
+> there are 3 roles in memento model:
+> 1. originator: the object to be saved.
+> 2. memento: the saved data.
+> 3. caretaker: the container of dates of different memento version.
+> 
+> the object can generate and recover from a memento by itself. 
