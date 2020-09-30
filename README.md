@@ -6,10 +6,10 @@ the basic elements needed for understanding one design mode :
 2. how to solve ?
 3. how is the solving effect ?
 ## singleton
-  - lazy mode
-    - statc inner class
+  - the lazy mode: create when use
+    - static inner class
     - DCL: double-checked lock
-  - hungry mode 
+  - the hungry mode: create when load
     - static init
 
 ## prototype
