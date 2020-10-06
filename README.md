@@ -41,3 +41,14 @@ the basic elements needed for understanding one design mode :
 > 3. caretaker: the container of dates of different memento version.
 > 
 > the object can generate and recover from a memento by itself. 
+
+## observer
+> one object changed, notify the other objects. 1 to N
+> there are 2 roles in observer model:
+> 1. observable: as part  "1"
+> 2. observer: as part "N"
+>
+> the observable maintains a list of observers,
+> and when it comes to changing something in the observable, 
+> the observable will notify all the observers in the list one by one
+> with args of the changed data or the references of itself. 
