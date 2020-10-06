@@ -35,6 +35,7 @@ the basic elements needed for understanding one design mode :
 
 ## memento
 > save one object's status and recover after.
+>
 > there are 3 roles in memento model:
 > 1. originator: the object to be saved.
 > 2. memento: the saved data.
@@ -44,6 +45,7 @@ the basic elements needed for understanding one design mode :
 
 ## observer
 > one object changed, notify the other objects. 1 to N
+>
 > there are 2 roles in observer model:
 > 1. observable: as part  "1"
 > 2. observer: as part "N"
@@ -63,7 +65,10 @@ the basic elements needed for understanding one design mode :
 > an object of the origin class, and override the methods in interface 
 > with a call of methods of origin and other code of enriching operation.
 
-## Delegate
+## delegate
+> make better controlling of the origin object or add some self operations 
+> when call the delegated method.
+>
 > One thought: Now I have a super talent coder and nobody knows him.
 > Everyone can contact me and propose product requirements,even if I
 > do not know coding, but I can make it perfectly with the talent .
