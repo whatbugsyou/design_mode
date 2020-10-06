@@ -1,8 +1,7 @@
-package main.prototype;
+package main.prototype.test;
 
+import main.prototype.SimplePrototype;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class SimplePrototypeTest {
 

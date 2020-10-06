@@ -1,7 +1,7 @@
 package main.prototype;
 
 public class SimplePrototype extends ProtypeAbs {
-    SimplePrototype(){
+    public SimplePrototype(){
         //the time costing progress
         try {
             Thread.sleep(10);
