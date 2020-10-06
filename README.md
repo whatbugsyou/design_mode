@@ -56,7 +56,7 @@ the basic elements needed for understanding one design mode :
 
 ## decorator
 > decorator enriches methods of an existing class.
-> it is kind of like AOP in spring.
+> `IO stream` and `Buffered IO stream` is a paradigm of the model.
 >
 > the decorator and the origin class implement the same interface
 > which contains the methods to be enriched. the decorator maintains
