@@ -5,6 +5,7 @@ import java.util.List;
 
 /**
  * this demo dose not consider thread safety, and has no specific message notify but notify all.
+ * It can be subclassed to represent an object that the application wants to have observed
  */
 public class Observable {
     private List<Observer> observers = new ArrayList<>();
