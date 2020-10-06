@@ -50,5 +50,15 @@ the basic elements needed for understanding one design mode :
 >
 > the observable maintains a list of observers,
 > and when it comes to changing something in the observable, 
-> the observable will notify all the observers in the list one by one
-> with args of the changed data or the references of itself. 
+> the observable will notify all the observers in the list in order
+> of the changes by a call to their `update` method with 
+> the args of the changed data or the references of itself. 
+
+## decorator
+> decorator enriches methods of an existing class.
+> it is kind of like AOP in spring.
+>
+> the decorator and the origin class implement the same interface
+> which contains the methods to be enriched. the decorator maintains
+> an object of the origin class, and override the methods in interface 
+> with a call of methods of origin and other code of enriching operation.
