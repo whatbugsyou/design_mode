@@ -62,3 +62,12 @@ the basic elements needed for understanding one design mode :
 > which contains the methods to be enriched. the decorator maintains
 > an object of the origin class, and override the methods in interface 
 > with a call of methods of origin and other code of enriching operation.
+
+## Delegate
+> One thought: Now I have a super talent coder and nobody knows him.
+> Everyone can contact me and propose product requirements,even if I
+> do not know coding, but I can make it perfectly with the talent .
+> In this case, I am the delegator of him. 
+>
+> the code implements of delegate model is most similar to decorator model,
+> but still has differences in encapsulation. 
