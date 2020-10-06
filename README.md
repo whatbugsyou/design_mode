@@ -67,12 +67,12 @@ the basic elements needed for understanding one design mode :
 
 ## delegate
 > make better controlling of the origin object or add some self operations 
-> when call the delegated method.
+> when calling the delegated method.
 >
 > One thought: Now I have a super talent coder and nobody knows him.
 > Everyone can contact me and propose product requirements,even if I
 > do not know coding, but I can make it perfectly with the talent .
 > In this case, I am the delegator of him. 
 >
-> the code implements of delegate model is most similar to decorator model,
-> but still has differences in encapsulation. 
+> the code implements of delegate model are most similar to decorator model,
+> but still have differences in encapsulation. 
