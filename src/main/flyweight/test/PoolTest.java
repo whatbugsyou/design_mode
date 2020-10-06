@@ -1,5 +1,7 @@
-package main.flyweight;
+package main.flyweight.test;
 
+import main.flyweight.Base;
+import main.flyweight.Pool;
 import org.junit.jupiter.api.Test;
 
 class PoolTest {

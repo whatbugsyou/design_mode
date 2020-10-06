@@ -1,5 +1,8 @@
-package main.memento;
+package main.memento.test;
 
+import main.memento.Caretaker;
+import main.memento.Memento;
+import main.memento.Player;
 import org.junit.jupiter.api.Test;
 
 import java.util.Date;

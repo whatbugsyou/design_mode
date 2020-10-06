@@ -1,5 +1,7 @@
-package main.decorator;
+package main.decorator.test;
 
+import main.decorator.Decorator;
+import main.decorator.Origin;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
