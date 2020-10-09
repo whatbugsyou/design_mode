@@ -81,3 +81,8 @@ the basic elements needed for understanding one design mode :
 > if one request or message will be handled with multiple receivers,
 > string the receivers into a chain, and make the chain a replacer 
 > of the receivers and as a filter of the request.
+
+## mediator
+> reduces the complexity of communicating between multiple objects 
+> that communicate by referencing to each other, it will simplify 
+> the communication mode from "N to N" to "N to 1 to N".
