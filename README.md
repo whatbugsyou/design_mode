@@ -76,3 +76,8 @@ the basic elements needed for understanding one design mode :
 >
 > the code implements of delegate model are most similar to decorator model,
 > but still have differences in encapsulation. 
+
+## chain of responsibility
+> if one request or message will be handled with multiple receivers,
+> string the receivers into a chain, and make the chain a replacer 
+> of the receivers and as a filter of the request.
