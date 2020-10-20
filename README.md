@@ -86,3 +86,10 @@ the basic elements needed for understanding one design mode :
 > reduces the complexity of communicating between multiple objects 
 > that communicate by referencing to each other, and will simplify 
 > the communication mode from "N to N" to "N to 1 to N".
+
+## builder
+> separate the construction and representation of object.it means 
+> a new way to creat an object other than the normal flow as 
+> `new constructor(arg1,arg2)`,and the representation of an object
+> could be more clear and readable for code --- no setter and a 
+> string of args when the object is complicated.
