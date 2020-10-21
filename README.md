@@ -93,3 +93,7 @@ the basic elements needed for understanding one design mode :
 > `new constructor(arg1,arg2)`,and the representation of an object
 > could be more clear and readable for code --- no setter and a 
 > string of args when the object is complicated.
+
+## adapter
+> turn the implementation of an interface into another interface's.
+> 
