@@ -5,6 +5,7 @@ public abstract class Template {
     abstract void second();
     public final void templeteMethod(){
         first();
+        //do some other operations
         second();
     }
 }
