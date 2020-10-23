@@ -96,4 +96,7 @@ the basic elements needed for understanding one design mode :
 
 ## adapter
 > turn the implementation of an interface into another interface's.
-> 
+
+## template method
+> extract the method of subclasses that have the same logic into their
+> super class and modifies with `final`.
