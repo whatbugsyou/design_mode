@@ -105,3 +105,7 @@ the basic elements needed for understanding one design mode :
 > combines the classes extend from the same super abstract class or implement 
 > one same interface into a class ,and exposed methods for calling the origin 
 > methods of them.
+
+## bridge
+> use a composition relationship replaces an inheritance relationship to reduce 
+> the coupling between objects.
