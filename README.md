@@ -100,3 +100,8 @@ the basic elements needed for understanding one design mode :
 ## template method
 > extract the method of subclasses that have the same logic into their
 > super class and modifies with `final`.
+
+## facade
+> combines the classes extend from the same super abstract class or implement 
+> one same interface into a class ,and exposed methods for calling the origin 
+> methods of them.
