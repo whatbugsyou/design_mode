@@ -109,3 +109,7 @@ the basic elements needed for understanding one design mode :
 ## bridge
 > use a composition relationship replaces an inheritance relationship to reduce 
 > the coupling between objects.
+
+## null object
+> use an empty object to replace the real `Null` object, providing default properties
+> and method body. 
