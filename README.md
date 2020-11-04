@@ -113,3 +113,7 @@ the basic elements needed for understanding one design mode :
 ## null object
 > use an empty object to replace the real `Null` object, providing default properties
 > and method body. 
+
+## criteria
+> also known as filter model.use different criteria which can be easily combined 
+> with logical to filter a list of object.
