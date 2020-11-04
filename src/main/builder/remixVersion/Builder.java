@@ -4,9 +4,9 @@ import main.builder.normalVersion.Building;
 
 public abstract class Builder {
     abstract void buildMaterials();
-    abstract Building createBuiding();
+    abstract Building createBuilding();
     public Building build(){
         buildMaterials();
-        return createBuiding();
+        return createBuilding();
     }
 }

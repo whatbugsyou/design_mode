@@ -10,7 +10,7 @@ public class GlassBuildingBuilder extends Builder{
     }
 
     @Override
-    Building createBuiding() {
+    Building createBuilding() {
         return glassBuilding;
     }
 }
