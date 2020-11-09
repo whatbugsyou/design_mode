@@ -141,6 +141,85 @@ by doing this, we could only maintain a order table for changing the order of de
 
 ## liskov substitution principle
 
+> Functions that use pointers or references to base classes must be able to use objects of derived classes without knowing it.
+
+negative example( RTTI（Run Time Type Identification , a curse of OOP):
+
+```java
+void DrawShape(Shape s)
+{
+    if (s instanceof Square)
+        DrawSquare((Square)s);
+    else if (s instanceof Circle)
+        DrawCircle((Circle)s);
+}
+```
+
+Considering a classical problem: is Square a Rectangle?
+
+for generally thinking, the answer is yes, but in the principle maybe not. let's see:
+
+```java
+public class Rectangle{
+    private double width;
+    private double height;
+    // setter and getter
+}
+public class Square extends Rectangle{
+    @Override
+    public setWidth(double width){
+        super.setWidth(width);
+        super.setHeight(height);
+    }
+    @Override
+    public setHeight(double Height){
+		super.setWidth(width);
+        super.setHeight(height);
+    }
+}
+```
+
+everything seems to be all right, until :
+
+```java
+void func1(Rectangle r){
+    r.setWidth(1);
+}
+```
+
+if we send an object of Square, the object is broken. because the height is not changed.
+
+the real reason is there have no *Polymorphism*. so we try to change the Rectangle ,which is contrary to OCP.
+
+```java
+public abstract class Rectangle{
+    private double width;
+    private double height;
+    abstract void setWidth();
+    abstract void setHeight();
+}
+```
+
+what is it? i don't know. whatever,  we lose a normal class ---- Rectangle. 
+
+no matter how we try , we still can't make it. what's the root reason? look this:
+
+```java
+void func2(Rectangle r){
+    r.setWidth(5);
+    r.setHeight(4);
+    assert r.getWidth() * r.getHeight() == 20;
+}
+```
+
+for user's opinion of view, it is easy to make an reasonable assumption that changing the width of a Rectangle would not change the height. so it works will with Rectangle. but if we send a Square to it, errors occur. 
+
+the key is:
+
+**square is a rectangle in our daily life, but Square Object is not a Rectangle Object in programing , because their behavior is different ,which is program design really concerned.**
+
+when using *Polymorphism*, all of the derived classes' behavior must be consistent with their base class in user's expectation.
+
 ## dependency inversion principle
 
 ## interface segregation principle
