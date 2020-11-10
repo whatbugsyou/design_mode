@@ -15,26 +15,42 @@
 negative example:
 
 ```java
-public abstract class server{ 
-    void connect();		//facet of connection
-    void disconnect();	//facet of connection
-    void send(); 		//facet of data channel
-    void reseive();		//facet of data channel
+public class Rectangle
+{
+    public idoublent Height;
+    public double Width;
+
+    public double Area()
+    {
+        return Width * Height;
+    }
+
+    public void Draw()
+    {
+		//draw on GUI
+    }
 }
 ```
+
+when include Rectangle, need include all the required dependency, such as Math and GUI related packege. but in some case, we just only want to compute area or draw a rectangle, which will waste time   in loading unused packages.
 
 positive example:
 
 ```java
-public interface Connection{
-    void connect();		
-    void disconnect();
+public class Rectangle{
+    public double Height;
+    public double Width;
 }
-public interface DataChannel{
-    void send();
-    void reseive();
+public class GeometryRectangle extends Rectangle{
+   	public double Area(){
+        return Width * Height;
+    }
 }
-public abstract class server implements Connection, DataChannel{}
+public class GraphicalRectangle extends Rectangel{
+    public void Draw(){
+		//draw on GUI
+    }
+}
 ```
 
 ## open-close principle
@@ -303,6 +319,45 @@ public interface IAnimal{
 look at this IAnimal interface, is it reasonable? NO. take fish for example ,it does not walk but swing. so if a fish class implements IAnimal, it must complete walk() ,that's ridiculous.
 
 ## composite reuse principle
+
+> Favor polymorphic composition of objects over inheritance as a reuse mechanism.
+
+when design a class or a project, we need to consider the extension efficiency.
+
+negative example:
+
+```java
+public class Car{
+    void move();
+}
+public class GasolineCar extends Car{
+    
+}
+public class ElectricCar extends Car{
+    
+}
+```
+
+now we got a few subclass of Car, and that's easy to code.
+
+ later we got trouble of this design. we need to create multi-energy cars and they are paint by diverse color.are we need to create class of RedGasCar, BlueSolarCar, .etc ? that's sound bad.
+
+positive example:
+
+```java
+public class Car{
+    private Color color;
+    private Energy energy;
+    public Car(Color color,Energy energy){
+        this.color=color;
+		this.energy=energy;
+    }
+}
+public interface Color{}
+public interface Energy{}
+public class RedColor implements Color{}
+public class SolorEnergy implements Energy{}
+```
 
 ## low of demeter
 
