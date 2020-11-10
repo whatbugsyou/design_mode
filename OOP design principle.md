@@ -222,7 +222,85 @@ when using *Polymorphism*, all of the derived classes' behavior must be consiste
 
 ## dependency inversion principle
 
+> High level modules should not depend upon low level modules. Both should depend upon abstractions.
+>
+> Abstractions should not depend upon details. Details should depend upon abstraction.
+
+All well-structured object-oriented architectures have clearly-defined layers, with each layer providing some coherent set of services though a well-defined and controlled interface.
+
+this principle is easy to be comprehended. if high level class directly depends upon low level class other than the reference of the abstract class of it or the interface it implements , it is hard to change for a new feature of low level class.
+
+negative example:
+
+```java
+public class Copyer{
+    public void copy(){
+        String s = null;
+        while((s=ConsoleReader.read()) != -1)	//directly depends upon low level class
+            ConsoleWriter.write();	//directly depends upon low level class
+    }
+}
+```
+
+this class can translate the input of one console to another. maybe we could call "Copyer" "ConsoleCopyer". 
+
+if there comes a new device that supports writing named "DiskWriter",and we want to use Copyer to translate date from ConsoleReader to it. the class Copyer may changed to:
+
+```java
+enum OutputDevice {console,disk};
+public class Copyer{
+    public void copy(OutputDevice dev){
+        String s = null;
+        while((s=ConsoleReader.read()) != -1){
+            if (dev == console)
+                ConsoleWriter(c);
+            else
+                DiskWriter(c);
+        }
+    }
+}
+```
+
+what if there are many more devices supporting writing? we went to pieces!
+
+positive example:
+
+```java
+public class Copyer{
+    public void copy(Reader r,Writer w){
+        String s = null;
+        while((s=r.read()) != -1)
+            w.write();
+    }
+}
+public interface Reader{
+    String read();
+}
+public class ConsoleReader implements Reader{
+	@Override
+    public String read(){
+        ...;
+    }
+}
+
+...
+```
+
 ## interface segregation principle
+
+> Clients should not be forced to depend upon interfaces that they do not use.
+
+the fat interface:
+
+```java
+public interface IAnimal{
+	void eat();
+    void sleep();
+    void walk();	//not good
+}
+```
+
+look at this IAnimal interface, is it reasonable? NO. take fish for example ,it does not walk but swing. so if a fish class implements IAnimal, it must complete walk() ,that's ridiculous.
 
 ## composite reuse principle
 
