@@ -5,8 +5,9 @@ the basic elements needed for understanding one design mode :
 1. what is the problem it solves ?
 2. how to solve ?
 3. how is the solving effect ?
+
 ## singleton
-> restrict the creation of only one object
+> Restrict to instantiate only one object
   - the lazy mode: create when use
     - static inner class
     - DCL: double-checked lock
@@ -23,7 +24,11 @@ the basic elements needed for understanding one design mode :
  - simple 
  - manager
  
-## factory
+## factory method
+> the abstract factory has main biz logic code, relating to the product object.
+> the product is serials. we can put the creation method into another method called factory method. 
+> and then we can reuse the biz code by extending the abstract factory when creating other new product.
+
 ## flyweight
 > reuse objects to reduce the operation times of `new`, 
 > if we need objects of the same class and only properties are 
