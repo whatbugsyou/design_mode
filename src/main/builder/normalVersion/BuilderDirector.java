@@ -7,7 +7,9 @@ public class BuilderDirector {
         this.builder = builder;
     }
     public Building build(){
+        builder.initBuilding();
         builder.buildMaterials();
-        return builder.createBuiding();
+        builder.buildOthers();
+        return builder.getBuilding();
     }
 }

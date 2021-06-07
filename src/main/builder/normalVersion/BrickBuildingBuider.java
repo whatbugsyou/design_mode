@@ -1,14 +1,25 @@
 package main.builder.normalVersion;
 
 public class BrickBuildingBuider extends Builder{
-    private Building brickBuiding = new Building();
+    private Building brickBuilding;
+
     @Override
-    void buildMaterials() {
-        brickBuiding.setMaterials("brick");
+    void initBuilding() {
+        brickBuilding = new Building();
     }
 
     @Override
-    public Building createBuiding() {
-        return brickBuiding;
+    void buildMaterials() {
+        brickBuilding.setMaterials("brick");
+    }
+
+    @Override
+    void buildOthers() {
+
+    }
+
+    @Override
+    public Building getBuilding() {
+        return brickBuilding;
     }
 }

@@ -1,15 +1,25 @@
 package main.builder.normalVersion;
 
 public class WoodBuildingBuilder extends Builder{
-    private Building woodBuiding = new Building();
+    private Building woodBuilding;
 
     @Override
-    void buildMaterials() {
-        woodBuiding.setMaterials("wood");
+    void initBuilding() {
+        woodBuilding = new Building();
     }
 
     @Override
-    public Building createBuiding() {
-        return woodBuiding;
+    void buildMaterials() {
+        woodBuilding.setMaterials("wood");
+    }
+
+    @Override
+    void buildOthers() {
+
+    }
+
+    @Override
+    public Building getBuilding() {
+        return woodBuilding;
     }
 }
