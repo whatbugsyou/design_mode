@@ -2,6 +2,7 @@ package main.prototype;
 
 public abstract class ProtypeAbs implements Cloneable {
 
+    @Override
     public SimplePrototype clone() {
         Object clone = null;
         try {
