@@ -19,7 +19,7 @@ public class MementoTest {
         caretaker.saveMemento(date, memento);
         System.out.println(player.getImportant_data_isAlive());
 
-        player.paly();
+        player.play();
         player.setImportant_data_isAlive("dead");
         System.out.println(player.getImportant_data_isAlive());
 

@@ -18,7 +18,7 @@ public class Player {
 
 
     //some specific method of Player
-    public void paly (){
+    public void play(){
         System.out.println("AWOOOOO~~");
     }
 
