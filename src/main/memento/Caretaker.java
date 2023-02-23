@@ -11,5 +11,6 @@ public class Caretaker {
     }
     public void saveMemento(Date date,Memento memento){
         mementoMap.put(date,memento);
+        System.out.println("memento saved");
     }
 }

@@ -2,32 +2,38 @@ package main.memento;
 
 //originator
 public class Player {
-    String important_data_isAlive = "alive"; //save to memento
-    String unimportant_data_name = "lion"; //not save to memento
+    Boolean important_data_isAlive; //save to memento
+    String unimportant_data_name; //not save to memento
+
+    public Player() {
+        this.important_data_isAlive = true;
+        this.unimportant_data_name = "lion";
+    }
 
     // kernel code
-    public Memento createMemento(){
+    public Memento createMemento() {
         Memento memento = new Memento();
         memento.setIsAlive(important_data_isAlive);
         return memento;
     }
 
-    public void recoverMemento(Memento memento){
+    public void recoverMemento(Memento memento) {
+        System.out.println("recovering ...");
         this.important_data_isAlive = memento.getIsAlive();
     }
 
 
     //some specific method of Player
-    public void play(){
-        System.out.println("AWOOOOO~~");
+    public void showStatus() {
+        System.out.println(getImportant_data_isAlive() ? "alive" : "dead");
     }
 
     //getter and setter
-    public String getImportant_data_isAlive() {
+    public Boolean getImportant_data_isAlive() {
         return important_data_isAlive;
     }
 
-    public void setImportant_data_isAlive(String important_data_isAlive) {
+    public void setImportant_data_isAlive(Boolean important_data_isAlive) {
         this.important_data_isAlive = important_data_isAlive;
     }
 
