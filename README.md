@@ -62,7 +62,7 @@ the basic elements needed for understanding one design mode :
 > the args of the changed data or the references of itself. 
 
 ## decorator
-> decorator enriches methods of an existing class.
+> decorator **enriches** methods of an existing class.
 > `IO stream` and `Buffered IO stream` is a paradigm of the model.
 >
 > the decorator and the origin class implement the same interface
@@ -71,7 +71,7 @@ the basic elements needed for understanding one design mode :
 > with a call of methods of origin and other code of enriching operation.
 
 ## delegate
-> make better controlling of the origin object or add some self operations 
+> make better **controlling** of the origin object or add some self operations 
 > when calling the delegated method.
 >
 > One thought: Now I have a super talent coder and nobody knows him.
