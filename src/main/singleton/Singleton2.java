@@ -3,6 +3,8 @@ package main.singleton;
 /**
  * Singleton with lazy mode
  * DCL : double-checked lock
+ *  1th check for fast false
+ *  2th check for preventing calling new Singleton2() twice
  *
  * thread unsafe before jdk 1.5
  * why?：A,B threads call getInstence() at the same time ,
@@ -20,9 +22,9 @@ public class Singleton2 {
     private static Singleton2 instance;
     private Singleton2(){}
     public static Singleton2 getInstance(){
-        if (instance != null) {   //check 1th
+        if (instance == null) {   //check 1th
             synchronized (Singleton2.class){
-                if (instance != null) { //check 2th
+                if (instance == null) { //check 2th
                     instance = new Singleton2();
                 }
             }
