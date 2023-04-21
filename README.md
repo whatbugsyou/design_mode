@@ -23,7 +23,13 @@ the basic elements needed for understanding one design mode :
 > the Object IO stream and implements `Serializable` 
  - simple 
  - manager
- 
+
+## simple factory
+> Give the factory different key to create different objects that implements the same interface.
+> the factory need to know all the key and its Corresponding object's creation.
+> the key is hardCode, and it is hard to maintain when the key set is gradually bigger.
+
+
 ## factory method
 > the abstract factory has main biz logic code, relating to the product object.
 > the product is serials. we can put the creation method into another method called factory method. 
