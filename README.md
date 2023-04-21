@@ -35,6 +35,11 @@ the basic elements needed for understanding one design mode :
 > so we can update or change the return type and the client is insensible.
 > the shortcoming is that it needs to define factory for every product.
 
+## abstract factory
+> create a series objects, that are from the same platform or have some reason stick them together.
+> the client only need to create the right factory, do not have to know the real type the factory creates.
+
+
 ## flyweight
 > reuse objects to reduce the operation times of `new`, 
 > if we need objects of the same class and only properties are 
