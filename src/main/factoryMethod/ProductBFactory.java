@@ -1,8 +1,0 @@
-package main.factoryMethod;
-
-public class ProductBFactory extends AbstractFactory{
-    @Override
-    public Product createProduct() {
-        return new ProductB();
-    }
-}

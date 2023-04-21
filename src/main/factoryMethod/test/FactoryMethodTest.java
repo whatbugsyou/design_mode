@@ -1,19 +1,15 @@
 package main.factoryMethod.test;
 
-import main.factoryMethod.AbstractFactory;
-import main.factoryMethod.ProductAFactory;
-import main.factoryMethod.ProductBFactory;
+import main.factoryMethod.CircleDrawerFactory;
+import main.factoryMethod.Drawer;
 import org.junit.jupiter.api.Test;
 
 public class FactoryMethodTest {
     @Test
     void test() {
-        AbstractFactory abstractFactory = null;
-
-        abstractFactory = new ProductAFactory();
-        abstractFactory.bizCode();
-
-        abstractFactory = new ProductBFactory();
-        abstractFactory.bizCode();
+        CircleDrawerFactory circleDrawerFactory = new CircleDrawerFactory();
+        Drawer drawer = circleDrawerFactory.createDrawer();
+        //the client do not know the level of drawer,maybe green hand or master
+        drawer.work();
     }
 }

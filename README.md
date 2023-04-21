@@ -31,9 +31,9 @@ the basic elements needed for understanding one design mode :
 
 
 ## factory method
-> the abstract factory has main biz logic code, relating to the product object.
-> the product is serials. we can put the creation method into another method called factory method. 
-> and then we can reuse the biz code by extending the abstract factory when creating other new product.
+> the factory create an object implementing the interface, but do not expose the specific type of the object.
+> so we can update or change the return type and the client is insensible.
+> the shortcoming is that it needs to define factory for every product.
 
 ## flyweight
 > reuse objects to reduce the operation times of `new`, 

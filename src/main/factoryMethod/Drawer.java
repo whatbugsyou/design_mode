@@ -1,5 +1,5 @@
 package main.factoryMethod;
 
-public interface Product {
+public interface Drawer {
     void work();
 }
