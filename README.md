@@ -1,5 +1,5 @@
 # design_mode
-> 23 design modes
+> 23+ design patterns implementation in Java
 >
 the basic elements needed for understanding one design mode :
 1. what is the problem it solves ?
@@ -133,3 +133,95 @@ the basic elements needed for understanding one design mode :
 ## criteria
 > also known as filter model.use different criteria which can be easily combined 
 > with logical to filter a list of object.
+
+## strategy
+> define a family of algorithms, encapsulate each one, and make them interchangeable.
+> strategy lets the algorithm vary independently from clients that use it.
+>
+> the strategy pattern allows you to select algorithms at runtime and promotes
+> the open/closed principle by making the code open for extension but closed for modification.
+
+## state
+> allow an object to alter its behavior when its internal state changes.
+> the object will appear to change its class.
+>
+> the state pattern eliminates the need for large conditional statements and 
+> makes state transitions explicit and manageable.
+
+## command
+> encapsulate a request as an object, thereby letting you parameterize other objects 
+> with different requests, queue or log requests, and support undoable operations.
+>
+> the command pattern decouples the object that invokes the operation from 
+> the object that actually performs the operation.
+
+## composite
+> compose objects into tree structures to represent part-whole hierarchies.
+> composite lets clients treat individual objects and compositions of objects uniformly.
+>
+> the composite pattern allows building complex structures from simpler components
+> and enables recursive composition.
+
+## proxy
+> provide a surrogate or placeholder for another object to control access to it.
+> proxy is used when we need to provide a controlled access to an object.
+>
+> different types of proxies include virtual proxy (lazy initialization), 
+> protection proxy (access control), and caching proxy (performance optimization).
+
+## iterator
+> provide a way to access the elements of an aggregate object sequentially 
+> without exposing its underlying representation.
+>
+> the iterator pattern promotes loose coupling by removing the need for clients
+> to know the internal structure of collections and supports multiple traversal algorithms.
+
+## visitor
+> represent an operation to be performed on the elements of an object structure.
+> visitor lets you define a new operation without changing the classes of the elements on which it operates.
+>
+> the visitor pattern allows adding new operations to existing object hierarchies 
+> without modifying the structure, following the open/closed principle.
+
+---
+
+## Newly Added Patterns
+
+The following design patterns have been recently implemented to complete the GoF (Gang of Four) collection:
+
+- **Strategy Pattern** - Payment processing with multiple payment methods (Credit Card, PayPal, Bitcoin)
+- **State Pattern** - Vending machine with different states (Idle, HasCoin, Dispensing, OutOfStock)  
+- **Command Pattern** - Remote control with undo functionality for home automation
+- **Composite Pattern** - Restaurant menu system with nested menus and menu items
+- **Proxy Pattern** - Image loading with lazy initialization, access control, and caching
+- **Iterator Pattern** - BookShelf collection with forward and reverse iteration
+- **Visitor Pattern** - Computer parts with display and price calculation operations
+
+Each pattern includes:
+- Complete implementation with proper interfaces and concrete classes
+- Comprehensive test cases demonstrating usage
+- Real-world examples and use cases
+- Proper documentation and comments
+
+### Pattern Categories Summary:
+
+**Creational Patterns (5):**
+- Singleton, Prototype, Simple Factory, Factory Method, Abstract Factory, Builder
+
+**Structural Patterns (7):** 
+- Decorator, Delegate, Bridge, Adapter, Facade, Flyweight, Composite, Proxy
+
+**Behavioral Patterns (11):**
+- Observer, Memento, Template Method, Chain of Responsibility, Mediator, Command, State, Strategy, Iterator, Visitor, Criteria
+
+### Running the Examples:
+
+```bash
+# Compile and run any pattern test:
+javac -cp src src/main/[pattern]/test/[Pattern]Test.java
+java -cp src main.[pattern].test.[Pattern]Test
+
+# Example:
+javac -cp src src/main/strategy/test/StrategyTest.java
+java -cp src main.strategy.test.StrategyTest
+```
